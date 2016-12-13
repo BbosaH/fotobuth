@@ -17,10 +17,15 @@
 
 //http://klockren-marketing.se/
 
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'studentaid');
+// define('DB_USERNAME', 'root');
+// define('DB_PASSWORD', '');
+// define('DB_HOST', 'localhost');
+// define('DB_NAME', 'studentaid');
+
+define('DB_USERNAME', 'studentchat_user');
+define('DB_PASSWORD', 'studentchat_password');
+define('DB_HOST', '172.30.21.78');
+define('DB_NAME', 'studentchat_db');
  
 define('USER_CREATED_SUCCESSFULLY', 0);
 define('MESSAGE_INSERT_FAILED',0);
