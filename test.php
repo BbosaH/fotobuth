@@ -2,44 +2,44 @@
   include("include/DbConnect.php");
   
   $sql = "ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);";
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;";
 
 //$sql = "drop table kabitigidi";
 $sql2 = "ALTER TABLE `chat`
-  ADD PRIMARY KEY (`id`);";
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=34;";
 
 $sql3 = "ALTER TABLE `chat_message`
-  ADD PRIMARY KEY (`id`);";
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=100;";
 
 $sql4="ALTER TABLE `myclass`
-  ADD PRIMARY KEY (`id`);";
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;";
 
 $sql5="ALTER TABLE `school`
-  ADD PRIMARY KEY (`id`);";
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;";
 
 $sql6 = "ALTER TABLE `status`
-  ADD PRIMARY KEY (`id`);";
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;";
 
 $sql7 = "ALTER TABLE `strong_subject`
-  ADD PRIMARY KEY (`id`);";
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;";
 
 $sql8 = "ALTER TABLE `subject`
-  ADD PRIMARY KEY (`id`);";
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;";
 
 $sql9 = "ALTER TABLE `subject_myclass`
-  ADD PRIMARY KEY (`id`);";
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;";
 
 $sql10 = "ALTER TABLE `university`
-  ADD PRIMARY KEY (`id`);";
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;";
 
 $sql11 = "ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);";
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;";
 
 $sql12 = "ALTER TABLE `user_connection`
-  ADD PRIMARY KEY (`id`);";
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=40";
 
 $sql13 = "ALTER TABLE `weak_subject`
-  ADD PRIMARY KEY (`id`);";
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13";
 
 $sql14 = "CREATE TABLE IF NOT EXISTS `weak_subject` (
   `id` int(30) NOT NULL,
