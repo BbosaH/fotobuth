@@ -38,7 +38,7 @@ try{
     
     
   
-    $sql = "SELECT * FROM kabitigidi`";
+    $sql = "SELECT * FROM `kabitigidi`";
     $result = $conn->query($sql);
     $rows = $result->fetchAll(PDO::FETCH_ASSOC);
            
