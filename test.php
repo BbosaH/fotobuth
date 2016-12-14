@@ -19,15 +19,27 @@ $sql = "INSERT INTO `kabitigidi` (`id`, `first_name`, `last_name`, `gender`, `em
 (1, 'Alien', 'Ware', 'male', 'alien@gmail.com', '$2a$10$772866c65026b58bfd9b9uMo6QHTKjh.K3R3lMdfI.E', '0790164259', '1481383407', 'AlienWare1481383407.png', '1481383419', 1),
 (2, 'lujja', 'Henry', 'male', 'bbosa.henry1@gmail.com', '$2a$10$4ad18e94a231d1e09101fuWMjDroYvlOmIzYXA4nL3h', '07859695', '1456873200', 'lujjaHenry1481384319.png', '1481384319', 1);";
   
-$sql = "SELECT * FROM kabitigidi`";
+
+
 
 try{
     $db = new DbConnect();
     $conn = $db->connect();
     
-    //$stmt = $conn->prepare($sql);
-    //$result = $stmt->execute();
-    $result = $db->query($sql);
+    $stmt = $conn->prepare($sql);
+    $result = $stmt->execute();
+    if ($result) {
+        echo "Kyekyo<br/>";
+        var_dump($result);
+    } else {
+        echo "winna<br/>";
+        var_dump($result);
+    }
+    
+    
+  
+    $sql = "SELECT * FROM kabitigidi`";
+    $result = $conn->query($sql);
     $rows = $result->fetchAll(PDO::FETCH_ASSOC);
            
     // Check for successful insertion
