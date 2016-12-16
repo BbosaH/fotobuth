@@ -10,10 +10,16 @@ class Chat implements MessageComponentInterface {
 
     public function __construct() {
 
-         $servername ='localhost';
-         $dbname ='studentaid';
-         $username ='root';
-         $password ='';
+         // $servername ='localhost';
+         // $dbname ='studentaid';
+         // $username ='root';
+         // $password ='';
+
+         $servername ='172.30.21.78';
+         $dbname ='studentchat_db';
+         $username ='studentchat_user';
+         $password ='studentchat_password';
+        
          $this->connn = new \PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
          $this->connn->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
     	 echo "Connecting ......";
