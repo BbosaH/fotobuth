@@ -10,13 +10,25 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (6, 'Filosofiska institutionen', 6, '', 'general'),
 (7, 'plant studies', 7, '', 'general'),
 (8, 'commercial law', 8, '', 'general'),
-(9, 'Picture Ediditng', 9, '', 'general'),
+(9, 'Picture Editng', 9, '', 'general'),
 (10, 'Abstract Motor designs', 10, '', 'general'),
 (11, 'Enginnering Mathematics', 11, '', 'general'),
 (12, 'UFO studies', 12, '', 'general');";
 
 //$sql = "drop table kabitigidi";
- $sql = "SELECT *FROM `myclass`";
+ $sql = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`) VALUES
+(1, 'Civilingenjörsprogrammet i teknisk fysik', 1, '', 'Involves  deep knowlegde about the computer'),
+(2, 'Institutionen for neurovetenskap', 2, '', 'involves technology and art of house designing'),
+(3, 'Institutionen for farmaceutisk biovetenskap', 3, '', 'This is study of Energy systmems'),
+(4, 'Matematiska institutionen', 4, '', 'science about forests'),
+(5, 'Teologiska institutionen', 5, '', 'general'),
+(6, 'Filosofiska institutionen', 6, '', 'general'),
+(7, 'plant studies', 7, '', 'general'),
+(8, 'commercial law', 8, '', 'general'),
+(9, 'Picture Editng', 9, '', 'general'),
+(10, 'Abstract Motor designs', 10, '', 'general'),
+(11, 'Enginnering Mathematics', 11, '', 'general'),
+(12, 'UFO studies', 12, '', 'general');";
 
  $sql1 = "INSERT INTO `subject` (`id`, `name`, `code`, `description`) VALUES
 (1, 'Calculus', 'CSC2100', 'This is about integration mathematics'),
@@ -73,14 +85,14 @@ try{
     $db = new DbConnect();
     $conn = $db->connect();
     
-//      $stmt = $conn->prepare($sql);
-//      $result = $stmt->execute();
+      $stmt = $conn->prepare($sql);
+      $result = $stmt->execute();
       
   
-    $query = $conn->query($sql);
-		$rows = $query->fetchAll(PDO::FETCH_ASSOC); 
+//     $query = $conn->query($sql);
+// 		$rows = $query->fetchAll(PDO::FETCH_ASSOC); 
 				
-		var_dump($rows);
+// 		var_dump($rows);
   
 //      $stmt2 = $conn->prepare($sql2);
 //      $result = $stmt2->execute();
@@ -121,13 +133,13 @@ try{
 //     $stmt14 = $conn->prepare($sql14);
 //     $result14 = $stmt14->execute();
   
-//     if ($result) {
-//         echo "Kyekyo 7<br/>";
-//         var_dump($result);
-//     } else {
-//         echo "winna<br/>";
-//         var_dump($result);
-//     }
+    if ($result) {
+        echo "Kyekyo 7<br/>";
+        var_dump($result);
+    } else {
+        echo "winna<br/>";
+        var_dump($result);
+    }
     
     
 }catch(PDOException $ex){
