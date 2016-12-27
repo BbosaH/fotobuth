@@ -15,10 +15,10 @@ class Chat implements MessageComponentInterface {
          // $username ='root';
          // $password ='';
 
-         $servername ='172.30.21.78';
-         $dbname ='studentchat_db';
-         $username ='studentchat_user';
-         $password ='studentchat_password';
+         $servername ='172.30.52.180';
+         $dbname ='aid_db';
+         $username ='aid_user';
+         $password ='aid_password';
         
          $this->connn = new \PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
          $this->connn->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
