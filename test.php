@@ -9,7 +9,7 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (5, 'Teologiska institutionen', 5, '', 'general'),
 (6, 'Filosofiska institutionen', 6, '', 'general'),
 (7, 'plant studies', 7, '', 'general'),
-(8, 'commercial law', 8, '', 'general')
+(8, 'commercial law', 8, '', 'general'),
 (9, 'Picture Ediditng', 9, '', 'general'),
 (10, 'Abstract Motor designs', 10, '', 'general'),
 (11, 'Enginnering Mathematics', 11, '', 'general'),
@@ -85,8 +85,8 @@ try{
     $db = new DbConnect();
     $conn = $db->connect();
     
-     $stmt = $conn->prepare($sql);
-     $result = $stmt->execute();
+//      $stmt = $conn->prepare($sql);
+//      $result = $stmt->execute();
       
   
 //     $query = $conn->query($sql);
@@ -95,7 +95,7 @@ try{
 // 		var_dump($rows);
   
      $stmt2 = $conn->prepare($sql2);
-     $result2 = $stmt2->execute();
+     $result = $stmt2->execute();
   
     $stmt3 = $conn->prepare($sql1);
     $result3 = $stmt3->execute();
