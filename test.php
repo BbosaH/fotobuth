@@ -15,7 +15,7 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (11, 'Enginnering Mathematics', 11, '', 'general'),
 (12, 'UFO studies', 12, '', 'general');";
 
-//$sql = "drop table kabitigidi";
+ $sql = "TRUNCATE table `subject`";
  $sql1 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`) VALUES
 (1, 'Civilingenjörsprogrammet i teknisk fysik', 1, '', 'Involves  deep knowlegde about the computer'),
 (2, 'Institutionen for neurovetenskap', 2, '', 'involves technology and art of house designing'),
@@ -30,7 +30,7 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (11, 'Enginnering Mathematics', 11, '', 'general'),
 (12, 'UFO studies', 12, '', 'general');";
 
- $sql = "INSERT INTO `subject` (`id`, `name`, `code`, `description`) VALUES
+ $sql3 = "INSERT INTO `subject` (`id`, `name`, `code`, `description`) VALUES
 (1, 'Calculus', 'CSC2100', 'This is about integration mathematics'),
 (2, 'Scientific computing', 'STC1102', 'This is about massive counting and computing'),
 (3, 'Algebra and Geometry', 'CSC1022', 'This is automata'),
