@@ -16,6 +16,7 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (12, 'UFO studies', 12, '', 'general');";
 
  $sql = "TRUNCATE table `subject`";
+ $sql7 = "TRUNCATE table `status`";
  $sql1 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`) VALUES
 (1, 'Civilingenjörsprogrammet i teknisk fysik', 1, '', 'Involves  deep knowlegde about the computer'),
 (2, 'Institutionen for neurovetenskap', 2, '', 'involves technology and art of house designing'),
@@ -94,8 +95,8 @@ try{
 				
 // 		var_dump($rows);
   
-//      $stmt2 = $conn->prepare($sql2);
-//      $result = $stmt2->execute();
+      $stmt2 = $conn->prepare($sql7);
+      $result = $stmt2->execute();
   
 //     $stmt3 = $conn->prepare($sql1);
 //     $result3 = $stmt3->execute();
