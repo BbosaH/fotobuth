@@ -6,7 +6,10 @@ $sql2 = "INSERT INTO `user` (`id`, `first_name`, `last_name`, `gender`, `email`,
 (2, 'Arnold', 'Pettersson', 'male', 'arnold.pettersson@gmail.com', '$2a$10$46af66222c8966e246c09OJyN6nl4uyIQMRtcYwc1A5A1ocwhm9Fq', '+46 790164259', '1', '1', '1', '0dcf8e049752fa9cbe04c4037c3e015b', 'avatar.png', 0, 0);";
 
 //$sql = "drop table kabitigidi";
- $sql = "SELECT *FROM `user` WHERE `id`=1;";
+ $sql = "INSERT INTO `university` (`id`, `name`, `country`, `description`, `date_created`) VALUES
+(1, 'Upsalla Universitet', 'Sweden', 'This  is one of the best universities in upsalla town', '1481383407'),
+(2, 'Lund Universitet', 'Sweden', 'Thi  is one of the best universities in sweden', '1481383407'),
+(3, 'Stockholm Universitet', 'Sweden', 'Found in stockholm', '1481472764');";
 
  $sql3 = "ALTER TABLE `chat_message`
   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=100;";
@@ -54,14 +57,14 @@ try{
     $db = new DbConnect();
     $conn = $db->connect();
     
-//      $stmt = $conn->prepare($sql);
-//      $result = $stmt->execute();
+     $stmt = $conn->prepare($sql);
+     $result = $stmt->execute();
       
   
-    $query = $conn->query($sql);
-		$rows = $query->fetchAll(PDO::FETCH_ASSOC); 
+//     $query = $conn->query($sql);
+// 		$rows = $query->fetchAll(PDO::FETCH_ASSOC); 
 				
-		var_dump($rows);
+// 		var_dump($rows);
   
 //     $stmt2 = $conn->prepare($sql2);
 //     $result2 = $stmt2->execute();
@@ -102,13 +105,13 @@ try{
 //     $stmt14 = $conn->prepare($sql14);
 //     $result14 = $stmt14->execute();
   
-//     if ($result) {
-//         echo "Kyekyo 4<br/>";
-//         var_dump($result);
-//     } else {
-//         echo "winna<br/>";
-//         var_dump($result);
-//     }
+    if ($result) {
+        echo "Kyekyo 5<br/>";
+        var_dump($result);
+    } else {
+        echo "winna<br/>";
+        var_dump($result);
+    }
     
     
 }catch(PDOException $ex){
