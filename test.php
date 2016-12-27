@@ -1,121 +1,48 @@
 <?php
 include("include/DbConnect.php");
   
-$sql = "CREATE TABLE IF NOT EXISTS `admin` (
-  `id` int(30) NOT NULL,
-  `first_name` varchar(100) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
-  `gender` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `phone` varchar(100) NOT NULL,
-  `dob` varchar(100) NOT NULL,
-  `avatar` varchar(200) NOT NULL,
-  `date_created` varchar(30) NOT NULL,
-  `active` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;";
+$sql = "ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);";
 
 //$sql = "drop table kabitigidi";
- $sql2 = "CREATE TABLE IF NOT EXISTS `chat` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `to_user_id` int(11) NOT NULL,
-  `date_created` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;";
+ $sql2 = "ALTER TABLE `chat`
+  ADD PRIMARY KEY (`id`);";
 
- $sql3 = "CREATE TABLE IF NOT EXISTS `chat_message` (
-  `id` int(30) NOT NULL,
-  `chat_id` int(30) NOT NULL,
-  `sender_id` int(20) NOT NULL,
-  `reciever_id` int(20) NOT NULL,
-  `message_details` text NOT NULL,
-  `sent_time` varchar(100) NOT NULL,
-  `status_id` int(10) NOT NULL,
-  `remarks` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=latin1;";
+ $sql3 = "ALTER TABLE `chat_message`
+  ADD PRIMARY KEY (`id`);";
 
- $sql4="CREATE TABLE IF NOT EXISTS `myclass` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `school_id` int(10) NOT NULL,
-  `code` varchar(30) NOT NULL,
-  `description` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;";
+ $sql4="ALTER TABLE `myclass`
+  ADD PRIMARY KEY (`id`);";
 
- $sql5="CREATE TABLE IF NOT EXISTS `school` (
-  `id` int(10) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `university_id` int(30) NOT NULL,
-  `description` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;";
+ $sql5="ALTER TABLE `school`
+  ADD PRIMARY KEY (`id`);";
 
- $sql6 = "CREATE TABLE IF NOT EXISTS `status` (
-  `id` int(10) NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `remarks` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;";
+ $sql6 = "ALTER TABLE `status`
+  ADD PRIMARY KEY (`id`);";
 
- $sql7 = "CREATE TABLE IF NOT EXISTS `strong_subject` (
-  `id` int(30) NOT NULL,
-  `subject_id` int(30) NOT NULL,
-  `user_id` int(30) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;";
+ $sql7 = "ALTER TABLE `strong_subject`
+  ADD PRIMARY KEY (`id`);";
 
- $sql8 = "CREATE TABLE IF NOT EXISTS `subject` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `code` varchar(20) NOT NULL,
-  `description` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;";
+ $sql8 = "ALTER TABLE `subject`
+  ADD PRIMARY KEY (`id`);";
 
- $sql9 = "CREATE TABLE IF NOT EXISTS `subject_myclass` (
-  `id` int(10) NOT NULL,
-  `myclass_id` int(10) NOT NULL,
-  `subject_id` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;";
+ $sql9 = "ALTER TABLE `subject_myclass`
+  ADD PRIMARY KEY (`id`);";
 
- $sql10 = "CREATE TABLE IF NOT EXISTS `university` (
-  `id` int(10) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `country` varchar(100) NOT NULL,
-  `description` text NOT NULL,
-  `date_created` varchar(30) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;";
+ $sql10 = "ALTER TABLE `university`
+  ADD PRIMARY KEY (`id`);";
 
- $sql11 = "CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL,
-  `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(50) NOT NULL,
-  `gender` varchar(100) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `password_hash` varchar(200) NOT NULL,
-  `phone_number` varchar(50) NOT NULL,
-  `university` varchar(50) NOT NULL,
-  `school` varchar(30) NOT NULL,
-  `classs` text NOT NULL,
-  `auth_tocken` varchar(200) NOT NULL,
-  `avatar` varchar(200) NOT NULL,
-  `chat_status` int(10) NOT NULL,
-  `level` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;";
+ $sql11 = "ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);";
 
- $sql12 = "CREATE TABLE IF NOT EXISTS `user_connection` (
-  `id` int(10) NOT NULL,
-  `user_id` int(10) NOT NULL,
-  `resource_id` int(10) NOT NULL,
-  `chat_id` int(10) NOT NULL,
-  `remarks` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;";
+ $sql12 = "ALTER TABLE `user_connection`
+  ADD PRIMARY KEY (`id`);";
 
 // $sql13 = "ALTER TABLE `weak_subject`
 //   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13";
 
-$sql13 = "CREATE TABLE IF NOT EXISTS `weak_subject` (
-  `id` int(30) NOT NULL,
-  `subject_id` int(30) NOT NULL,
-  `user_id` int(30) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
-";
+$sql13 = "ALTER TABLE `weak_subject`
+  ADD PRIMARY KEY (`id`);";
 
 // $sql15 = "";
 
