@@ -15,8 +15,8 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (11, 'Enginnering Mathematics', 11, '', 'general'),
 (12, 'UFO studies', 12, '', 'general');";
 
- $sql = "TRUNCATE table `subject`";
- $sql7 = "TRUNCATE table `status`";
+ //$sql = "TRUNCATE table `subject`";
+ //$sql7 = "TRUNCATE table `status`";
  $sql1 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`) VALUES
 (1, 'Civilingenjörsprogrammet i teknisk fysik', 1, '', 'Involves  deep knowlegde about the computer'),
 (2, 'Institutionen for neurovetenskap', 2, '', 'involves technology and art of house designing'),
@@ -31,7 +31,7 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (11, 'Enginnering Mathematics', 11, '', 'general'),
 (12, 'UFO studies', 12, '', 'general');";
 
- $sql3 = "INSERT INTO `subject` (`id`, `name`, `code`, `description`) VALUES
+ $sql = "INSERT INTO `subject` (`id`, `name`, `code`, `description`) VALUES
 (1, 'Calculus', 'CSC2100', 'This is about integration mathematics'),
 (2, 'Scientific computing', 'STC1102', 'This is about massive counting and computing'),
 (3, 'Algebra and Geometry', 'CSC1022', 'This is automata'),
@@ -41,7 +41,7 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (7, 'Electromagnetism 1', 'BSSE1200', 'This is about designing software algorithms'),
 (8, 'Mechanics ii', 'ENR 1202', 'The study about big energy systems');";
 
- $sql4="INSERT INTO `status` (`id`, `name`, `remarks`) VALUES
+ $sql7="INSERT INTO `status` (`id`, `name`, `remarks`) VALUES
 (1, 'pending', 'This is a message that a user has clicked sent but has not yet arrives to recivers phone'),
 (2, 'sent', 'This is message sent and recived by reciver'),
 (3, 'seen', 'This is a message that the reciver has seen and read');";
