@@ -136,7 +136,7 @@
 
 	if(isset($_GET['universities']))
 	{
-		
+	    header('Access-Control-Allow-Origin: *');
 	    getUniversities();
 	}else if(isset($_GET['users']))
 	{
