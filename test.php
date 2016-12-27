@@ -97,11 +97,11 @@ try{
      $stmt2 = $conn->prepare($sql2);
      $result = $stmt2->execute();
   
-    $stmt3 = $conn->prepare($sql1);
-    $result3 = $stmt3->execute();
+//     $stmt3 = $conn->prepare($sql1);
+//     $result3 = $stmt3->execute();
   
-    $stmt4 = $conn->prepare($sql4);
-    $result4 = $stmt4->execute();
+//     $stmt4 = $conn->prepare($sql4);
+//     $result4 = $stmt4->execute();
   
 //     $stmt5 = $conn->prepare($sql5);
 //     $result5 = $stmt5->execute();
