@@ -1,17 +1,36 @@
 <?php
 include("include/DbConnect.php");
   
-$sql2 = "INSERT INTO `user` (`id`, `first_name`, `last_name`, `gender`, `email`, `password_hash`, `phone_number`, `university`, `school`, `classs`, `auth_tocken`, `avatar`, `chat_status`, `level`) VALUES
-(1, 'henry', 'Bbosa', 'female', 'bbosa.henry1@gmail.com', '$2a$10$bb7c46b506c1ccf374be4u5fNopGDYh0LzFwAzo5yBWhVsUYBgqN2', '+256 77777557', '1', '1', '1', '6325ab30f8d2b4543e637507ebc820cd', 'avatar.png', 1, 0),
-(2, 'Arnold', 'Pettersson', 'male', 'arnold.pettersson@gmail.com', '$2a$10$46af66222c8966e246c09OJyN6nl4uyIQMRtcYwc1A5A1ocwhm9Fq', '+46 790164259', '1', '1', '1', '0dcf8e049752fa9cbe04c4037c3e015b', 'avatar.png', 0, 0);";
+$sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`) VALUES
+(1, 'Matematiska institutionen', 1, '', 'Involves  deep knowlegde about the computer'),
+(2, 'Institutionen for neurovetenskap', 2, '', 'involves technology and art of house designing'),
+(3, 'Institutionen for farmaceutisk biovetenskap', 3, '', 'This is study of Energy systmems'),
+(4, 'Institutionen for fysik och astronomi', 4, '', 'science about forests'),
+(5, 'Teologiska institutionen', 5, '', 'general'),
+(6, 'Filosofiska institutionen', 6, '', 'general'),
+(7, 'plant studies', 7, '', 'general'),
+(8, 'commercial law', 8, '', 'general')
+(9, 'Picture Ediditng', 9, '', 'general'),
+(10, 'Abstract Motor designs', 10, '', 'general'),
+(11, 'Enginnering Mathematics', 11, '', 'general'),
+(12, 'UFO studies', 12, '', 'general');";
 
 //$sql = "drop table kabitigidi";
- $sql1 = "INSERT INTO `university` (`id`, `name`, `country`, `description`, `date_created`) VALUES
-(1, 'Upsalla Universitet', 'Sweden', 'This  is one of the best universities in upsalla town', '1481383407'),
-(2, 'Lund Universitet', 'Sweden', 'Thi  is one of the best universities in sweden', '1481383407'),
-(3, 'Stockholm Universitet', 'Sweden', 'Found in stockholm', '1481472764');";
+ $sql = "INSERT INTO `school` (`id`, `name`, `university_id`, `description`) VALUES
+(1, ' Matematisk-datavetenskapliga sektionen', 1, 'This involves computing and information technology'),
+(2, 'Medicinska fakulteten', 1, 'This is the school that works with technology advancements'),
+(3, 'Farmaceutiska fakulteten', 1, 'about forests'),
+(4, 'Fysiska sektionen', 1, 'about being a doctor'),
+(5, 'Teologiska fakulteten', 1, 'about being a doctor'),
+(6, 'Historisk-filosofiska fakulteten', 1, 'about being a doctor'),
+(7, 'Faculty of Science', 2, 'about being a doctor'),
+(8, 'Faculty of Law', 2, 'about being a doctor'),
+(9, 'Faculty of Fine & Performing Arts', 2, 'about being a doctor'),
+(10,'Faculty of Engineering', 2, 'engineering fuculty at lund university'),
+(11,'Department of Mathematics', 3, 'engineering fuculty at stockholm university'),
+(12,'Department of Astronomy', 3, 'astronomy fuculty at stockholm university');";
 
- $sql = "SELECT *FROM `university`";
+ $sql1 = "SELECT *FROM `university`";
 
  $sql4="ALTER TABLE `myclass`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;";
@@ -56,17 +75,17 @@ try{
     $db = new DbConnect();
     $conn = $db->connect();
     
-//      $stmt = $conn->prepare($sql);
-//      $result = $stmt->execute();
+     $stmt = $conn->prepare($sql);
+     $result = $stmt->execute();
       
   
-    $query = $conn->query($sql);
-		$rows = $query->fetchAll(PDO::FETCH_ASSOC); 
+//     $query = $conn->query($sql);
+// 		$rows = $query->fetchAll(PDO::FETCH_ASSOC); 
 				
-		var_dump($rows);
+// 		var_dump($rows);
   
-//     $stmt2 = $conn->prepare($sql2);
-//     $result2 = $stmt2->execute();
+     $stmt2 = $conn->prepare($sql2);
+     $result2 = $stmt2->execute();
   
 //     $stmt3 = $conn->prepare($sql3);
 //     $result3 = $stmt3->execute();
@@ -104,13 +123,13 @@ try{
 //     $stmt14 = $conn->prepare($sql14);
 //     $result14 = $stmt14->execute();
   
-//     if ($result) {
-//         echo "Kyekyo 5<br/>";
-//         var_dump($result);
-//     } else {
-//         echo "winna<br/>";
-//         var_dump($result);
-//     }
+    if ($result) {
+        echo "Kyekyo 6<br/>";
+        var_dump($result);
+    } else {
+        echo "winna<br/>";
+        var_dump($result);
+    }
     
     
 }catch(PDOException $ex){
