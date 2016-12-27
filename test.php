@@ -16,7 +16,7 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (12, 'UFO studies', 12, '', 'general');";
 
 //$sql = "drop table kabitigidi";
- $sql = "SELECT *FROM myclass";
+ $sql = "SELECT *FROM `myclass`";
 
  $sql1 = "INSERT INTO `subject` (`id`, `name`, `code`, `description`) VALUES
 (1, 'Calculus', 'CSC2100', 'This is about integration mathematics'),
