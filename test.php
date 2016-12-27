@@ -32,13 +32,13 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 
  $sql = "INSERT INTO `subject` (`id`, `name`, `code`, `description`) VALUES
 (1, 'Calculus', 'CSC2100', 'This is about integration mathematics'),
-(2, 'Statictics', 'STC1102', 'This is about massive counting and computing'),
-(3, 'Automata', 'CSC1022', 'This is automata'),
+(2, 'Scientific computing', 'STC1102', 'This is about massive counting and computing'),
+(3, 'Algebra and Geometry', 'CSC1022', 'This is automata'),
 (4, 'Engineering Mathematics', 'ENG1230', 'This is Engineering in mathematics'),
-(5, 'History', 'HIS1320', 'This is about European History'),
-(6, 'Business Logic', 'BSE1203', 'This is predicate logic'),
-(7, 'Data Structures and Algorithms', 'BSSE1200', 'This is about designing software algorithms'),
-(8, 'Big Energy Systems', 'ENR 1202', 'The study about big energy systems');";
+(5, 'Introduction to material science', 'HIS1320', 'This is about European History'),
+(6, 'Multivariable analysis', 'BSE1203', 'This is predicate logic'),
+(7, 'Electromagnetism 1', 'BSSE1200', 'This is about designing software algorithms'),
+(8, 'Mechanics ii', 'ENR 1202', 'The study about big energy systems');";
 
  $sql4="INSERT INTO `status` (`id`, `name`, `remarks`) VALUES
 (1, 'pending', 'This is a message that a user has clicked sent but has not yet arrives to recivers phone'),
