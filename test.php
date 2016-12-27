@@ -1,13 +1,12 @@
 <?php
 include("include/DbConnect.php");
   
-$sql = "INSERT INTO `user` (`id`, `first_name`, `last_name`, `gender`, `email`, `password_hash`, `phone_number`, `university`, `school`, `classs`, `auth_tocken`, `avatar`, `chat_status`, `level`) VALUES
+$sql2 = "INSERT INTO `user` (`id`, `first_name`, `last_name`, `gender`, `email`, `password_hash`, `phone_number`, `university`, `school`, `classs`, `auth_tocken`, `avatar`, `chat_status`, `level`) VALUES
 (1, 'henry', 'Bbosa', 'female', 'bbosa.henry1@gmail.com', '$2a$10$bb7c46b506c1ccf374be4u5fNopGDYh0LzFwAzo5yBWhVsUYBgqN2', '+256 77777557', '1', '1', '1', '6325ab30f8d2b4543e637507ebc820cd', 'avatar.png', 1, 0),
 (2, 'Arnold', 'Pettersson', 'male', 'arnold.pettersson@gmail.com', '$2a$10$46af66222c8966e246c09OJyN6nl4uyIQMRtcYwc1A5A1ocwhm9Fq', '+46 790164259', '1', '1', '1', '0dcf8e049752fa9cbe04c4037c3e015b', 'avatar.png', 0, 0);";
 
 //$sql = "drop table kabitigidi";
- $sql2 = "ALTER TABLE `chat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=34;";
+ $sql = "SELECT *FROM `user` WHERE `id`=1;";
 
  $sql3 = "ALTER TABLE `chat_message`
   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=100;";
@@ -55,8 +54,14 @@ try{
     $db = new DbConnect();
     $conn = $db->connect();
     
-     $stmt = $conn->prepare($sql);
-     $result = $stmt->execute();
+//      $stmt = $conn->prepare($sql);
+//      $result = $stmt->execute();
+      
+  
+    $query = $conn->query($sql);
+		$rows = $query->fetchAll(PDO::FETCH_ASSOC); 
+				
+		var_dump($rows);
   
 //     $stmt2 = $conn->prepare($sql2);
 //     $result2 = $stmt2->execute();
@@ -97,13 +102,13 @@ try{
 //     $stmt14 = $conn->prepare($sql14);
 //     $result14 = $stmt14->execute();
   
-    if ($result) {
-        echo "Kyekyo 4<br/>";
-        var_dump($result);
-    } else {
-        echo "winna<br/>";
-        var_dump($result);
-    }
+//     if ($result) {
+//         echo "Kyekyo 4<br/>";
+//         var_dump($result);
+//     } else {
+//         echo "winna<br/>";
+//         var_dump($result);
+//     }
     
     
 }catch(PDOException $ex){
