@@ -2,10 +2,10 @@
 include("include/DbConnect.php");
   
 $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`) VALUES
-(1, 'Matematiska institutionen', 1, '', 'Involves  deep knowlegde about the computer'),
+(1, 'Civilingenjörsprogrammet i teknisk fysik', 1, '', 'Involves  deep knowlegde about the computer'),
 (2, 'Institutionen for neurovetenskap', 2, '', 'involves technology and art of house designing'),
 (3, 'Institutionen for farmaceutisk biovetenskap', 3, '', 'This is study of Energy systmems'),
-(4, 'Institutionen for fysik och astronomi', 4, '', 'science about forests'),
+(4, 'Matematiska institutionen', 4, '', 'science about forests'),
 (5, 'Teologiska institutionen', 5, '', 'general'),
 (6, 'Filosofiska institutionen', 6, '', 'general'),
 (7, 'plant studies', 7, '', 'general'),
@@ -17,10 +17,10 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 
 //$sql = "drop table kabitigidi";
  $sql = "INSERT INTO `school` (`id`, `name`, `university_id`, `description`) VALUES
-(1, ' Matematisk-datavetenskapliga sektionen', 1, 'This involves computing and information technology'),
+(1, 'Fysiska sektionen', 1, 'This involves computing and information technology'),
 (2, 'Medicinska fakulteten', 1, 'This is the school that works with technology advancements'),
 (3, 'Farmaceutiska fakulteten', 1, 'about forests'),
-(4, 'Fysiska sektionen', 1, 'about being a doctor'),
+(4, 'Matematisk-datavetenskapliga sektionen', 1, 'about being a doctor'),
 (5, 'Teologiska fakulteten', 1, 'about being a doctor'),
 (6, 'Historisk-filosofiska fakulteten', 1, 'about being a doctor'),
 (7, 'Faculty of Science', 2, 'about being a doctor'),
@@ -30,10 +30,20 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (11,'Department of Mathematics', 3, 'engineering fuculty at stockholm university'),
 (12,'Department of Astronomy', 3, 'astronomy fuculty at stockholm university');";
 
- $sql1 = "SELECT *FROM `university`";
+ $sql1 = "INSERT INTO `subject` (`id`, `name`, `code`, `description`) VALUES
+(1, 'Calculus', 'CSC2100', 'This is about integration mathematics'),
+(2, 'Statictics', 'STC1102', 'This is about massive counting and computing'),
+(3, 'Automata', 'CSC1022', 'This is automata'),
+(4, 'Engineering Mathematics', 'ENG1230', 'This is Engineering in mathematics'),
+(5, 'History', 'HIS1320', 'This is about European History'),
+(6, 'Business Logic', 'BSE1203', 'This is predicate logic'),
+(7, 'Data Structures and Algorithms', 'BSSE1200', 'This is about designing software algorithms'),
+(8, 'Big Energy Systems', 'ENR 1202', 'The study about big energy systems');";
 
- $sql4="ALTER TABLE `myclass`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;";
+ $sql4="INSERT INTO `status` (`id`, `name`, `remarks`) VALUES
+(1, 'pending', 'This is a message that a user has clicked sent but has not yet arrives to recivers phone'),
+(2, 'sent', 'This is message sent and recived by reciver'),
+(3, 'seen', 'This is a message that the reciver has seen and read');";
 
  $sql5="ALTER TABLE `school`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;";
