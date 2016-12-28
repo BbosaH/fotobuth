@@ -15,7 +15,7 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (11, 'Enginnering Mathematics', 11, '', 'general'),
 (12, 'UFO studies', 12, '', 'general');";
 
- //$sql = "TRUNCATE table `subject`";
+ $sql = "TRUNCATE table `subject`";
  //$sql7 = "TRUNCATE table `status`";
  $sql1 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`) VALUES
 (1, 'Civilingenjörsprogrammet i teknisk fysik', 1, '', 'Involves  deep knowlegde about the computer'),
@@ -31,15 +31,15 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (11, 'Enginnering Mathematics', 11, '', 'general'),
 (12, 'UFO studies', 12, '', 'general');";
 
- $sql = "INSERT INTO `subject` (`id`, `name`, `code`, `description`) VALUES
-(1, 'Calculus', 'CSC2100', 'This is about integration mathematics'),
-(2, 'Statictics', 'STC1102', 'This is about massive counting and computing'),
-(3, 'Automata', 'CSC1022', 'This is automata'),
-(4, 'Engineering Mathematics', 'ENG1230', 'This is Engineering in mathematics'),
-(5, 'History', 'HIS1320', 'This is about European History'),
-(6, 'Business Logic', 'BSE1203', 'This is predicate logic'),
-(7, 'Data Structures and Algorithms', 'BSSE1200', 'This is about designing software algorithms'),
-(8, 'Big Energy Systems', 'ENR 1202', 'The study about big energy systems');";
+//  $sql = "INSERT INTO `subject` (`id`, `name`, `code`, `description`) VALUES
+// (1, 'Calculus', 'CSC2100', 'This is about integration mathematics'),
+// (2, 'Statictics', 'STC1102', 'This is about massive counting and computing'),
+// (3, 'Automata', 'CSC1022', 'This is automata'),
+// (4, 'Engineering Mathematics', 'ENG1230', 'This is Engineering in mathematics'),
+// (5, 'History', 'HIS1320', 'This is about European History'),
+// (6, 'Business Logic', 'BSE1203', 'This is predicate logic'),
+// (7, 'Data Structures and Algorithms', 'BSSE1200', 'This is about designing software algorithms'),
+// (8, 'Big Energy Systems', 'ENR 1202', 'The study about big energy systems');";
 
  $sql7="INSERT INTO `status` (`id`, `name`, `remarks`) VALUES
 (1, 'pending', 'This is a message that a user has clicked sent but has not yet arrives to recivers phone'),
@@ -135,7 +135,7 @@ try{
 //     $result14 = $stmt14->execute();
   
     if ($result) {
-        echo "Kyekyo 9<br/>";
+        echo "Kyekyo 10<br/>";
         var_dump($result);
     } else {
         echo "winna<br/>";
