@@ -31,7 +31,7 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (11, 'Enginnering Mathematics', 11, '', 'general'),
 (12, 'UFO studies', 12, '', 'general');";
 
- $sql = "INSERT INTO `subject` (`id`, `name`, `code`, `description`) VALUES
+ $sql18 = "INSERT INTO `subject` (`id`, `name`, `code`, `description`) VALUES
 (1, 'Calculus', 'CSC2100', 'This is about integration mathematics'),
 (2, 'Statictics', 'STC1102', 'This is about massive counting and computing'),
 (3, 'Automata', 'CSC1022', 'This is automata'),
