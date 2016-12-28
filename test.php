@@ -135,7 +135,7 @@ try{
 //     $result14 = $stmt14->execute();
   
     if ($result) {
-        echo "Kyekyo 8<br/>";
+        echo "Kyekyo 9<br/>";
         var_dump($result);
     } else {
         echo "winna<br/>";
