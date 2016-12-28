@@ -339,6 +339,11 @@
 			echo json_encode($mychats);
 
 
+		}else
+		{
+			echo json_encode(
+				array("chats"=>'none')
+			);
 		}
 
 		
