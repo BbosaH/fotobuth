@@ -15,7 +15,17 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (11, 'Enginnering Mathematics', 11, '', 'general'),
 (12, 'UFO studies', 12, '', 'general');";
 
- $sql = "TRUNCATE table `subject`";
+ $sql = "INSERT INTO `subject_myclass` (`id`, `myclass_id`, `subject_id`) VALUES
+(1, 1, 1),
+(2, 1, 4),
+(3, 1, 6),
+(4, 3, 7),
+(5, 3, 6),
+(6, 2, 4),
+(7, 2, 5),
+(8, 3, 5),
+(9, 1, 7),
+(10, 3, 8);";
  //$sql7 = "TRUNCATE table `status`";
  $sql1 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`) VALUES
 (1, 'Civilingenjörsprogrammet i teknisk fysik', 1, '', 'Involves  deep knowlegde about the computer'),
@@ -135,7 +145,7 @@ try{
 //     $result14 = $stmt14->execute();
   
     if ($result) {
-        echo "Kyekyo 10<br/>";
+        echo "Kyekyo 11<br/>";
         var_dump($result);
     } else {
         echo "winna<br/>";
