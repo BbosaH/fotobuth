@@ -31,15 +31,7 @@ $sql2 = "INSERT INTO `myclass` (`id`, `name`, `school_id`, `code`, `description`
 (11, 'Enginnering Mathematics', 11, '', 'general'),
 (12, 'UFO studies', 12, '', 'general');";
 
- $sql = "INSERT INTO `subject` (`id`, `name`, `code`, `description`) VALUES
-(1, 'Calculus', 'CSC2100', 'This is about integration mathematics'),
-(2, 'Scientific computing', 'STC1102', 'This is about massive counting and computing'),
-(3, 'Algebra and Geometry', 'CSC1022', 'This is automata'),
-(4, 'Engineering Mathematics', 'ENG1230', 'This is Engineering in mathematics'),
-(5, 'Introduction to material science', 'HIS1320', 'This is about European History'),
-(6, 'Multivariable analysis', 'BSE1203', 'This is predicate logic'),
-(7, 'Electromagnetism 1', 'BSSE1200', 'This is about designing software algorithms'),
-(8, 'Mechanics ii', 'ENR 1202', 'The study about big energy systems');";
+ $sql = "SELECT *FROM `subject`";
 
  $sql7="INSERT INTO `status` (`id`, `name`, `remarks`) VALUES
 (1, 'pending', 'This is a message that a user has clicked sent but has not yet arrives to recivers phone'),
@@ -86,17 +78,17 @@ try{
     $db = new DbConnect();
     $conn = $db->connect();
     
-      $stmt = $conn->prepare($sql);
-      $result = $stmt->execute();
+//       $stmt = $conn->prepare($sql);
+//       $result = $stmt->execute();
       
   
-//     $query = $conn->query($sql);
-// 		$rows = $query->fetchAll(PDO::FETCH_ASSOC); 
+    $query = $conn->query($sql);
+		$rows = $query->fetchAll(PDO::FETCH_ASSOC); 
 				
-// 		var_dump($rows);
+		var_dump($rows);
   
-      $stmt2 = $conn->prepare($sql7);
-      $result = $stmt2->execute();
+//       $stmt2 = $conn->prepare($sql7);
+//       $result = $stmt2->execute();
   
 //     $stmt3 = $conn->prepare($sql1);
 //     $result3 = $stmt3->execute();
@@ -134,13 +126,13 @@ try{
 //     $stmt14 = $conn->prepare($sql14);
 //     $result14 = $stmt14->execute();
   
-    if ($result) {
-        echo "Kyekyo 8<br/>";
-        var_dump($result);
-    } else {
-        echo "winna<br/>";
-        var_dump($result);
-    }
+//     if ($result) {
+//         echo "Kyekyo 8<br/>";
+//         var_dump($result);
+//     } else {
+//         echo "winna<br/>";
+//         var_dump($result);
+//     }
     
     
 }catch(PDOException $ex){
