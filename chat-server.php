@@ -14,7 +14,7 @@ use MyApp\Chat;
                 new Chat()
             )
         ),
-        8000
+        8443
     );
 
     $server->run();
