@@ -8,23 +8,23 @@ use MyApp\Chat;
  require 'vendor/autoload.php';
 
 
-//      $server = IoServer::factory(
-//         new HttpServer(
-//             new WsServer(
-//                 new Chat()
-//             )
-//         ),
-//         8443
-//     );
-
-    $server = IoServer::factory(
+     $server = IoServer::factory(
         new HttpServer(
             new WsServer(
                 new Chat()
             )
         ),
-        8000
+        8443
     );
+
+//     $server = IoServer::factory(
+//         new HttpServer(
+//             new WsServer(
+//                 new Chat()
+//             )
+//         ),
+//         8000
+//     );
 
     $server->run();
  ?>
